@@ -1,5 +1,5 @@
 .nav {
-	padding: 2rem 3rem;
+	padding: 3rem 4rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -12,11 +12,24 @@
 
 	&__logo {
 		max-height: 4.5em;
-		height: 4.5rem;
-		width: 21rem;
+		height: 8rem;
+		// width: 21rem;
 
 		img {
 			@include img-size;
 		}
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $color-black;
+	padding: 2rem 4rem;
+
+	.nav__logo {
+		height: 5rem;
 	}
 }

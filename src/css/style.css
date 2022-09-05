@@ -20,6 +20,11 @@ html {
     font-size: 55%;
   }
 }
+@media only screen and (max-width: 35.9375em) {
+  html {
+    font-size: 50%;
+  }
+}
 @media only screen and (max-width: 30em) {
   html {
     font-size: 45%;
@@ -40,7 +45,7 @@ body {
 
 @media only screen and (max-width: 48em) {
   section {
-    padding: 10rem 5rem !important;
+    padding: 10rem !important;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -1062,7 +1067,7 @@ a:hover {
 
 .btn {
   padding: 1rem 3rem;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   font-weight: 700;
   color: #fff;
   border-radius: 10rem;
@@ -1074,7 +1079,7 @@ a:hover {
 }
 
 .nav {
-  padding: 2rem 3rem;
+  padding: 3rem 4rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -1088,20 +1093,32 @@ a:hover {
 }
 .nav__logo {
   max-height: 4.5em;
-  height: 4.5rem;
-  width: 21rem;
+  height: 8rem;
 }
 .nav__logo img {
   height: 100%;
   width: 100%;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 2rem 4rem;
+}
+.sticky .nav__logo {
+  height: 5rem;
+}
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/bg-hero.jpg");
   background-size: cover;
-  background-position: center left;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   position: relative;
 }
 @media only screen and (max-width: 62em) {
@@ -1109,26 +1126,26 @@ a:hover {
     background-position: center;
   }
 }
-.header .content-wrapper {
-  color: #fff;
-  max-width: 72rem;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-}
-@media only screen and (max-width: 48em) {
-  .header .content-wrapper {
-    position: absolute;
-    left: 0;
+@media only screen and (max-width: 62em) {
+  .header {
     padding: 0 5rem;
   }
 }
-@media only screen and (max-width: 30em) {
-  .header .content-wrapper {
-    position: absolute;
-    left: 0;
+@media only screen and (max-width: 62em) {
+  .header {
     padding: 0 2rem;
+  }
+}
+.header .content-wrapper {
+  color: #fff;
+  max-width: 80rem;
+  width: 100%;
+  padding: 18.7em 12% 4em 0;
+  margin-left: 16%;
+}
+@media only screen and (max-width: 48em) {
+  .header .content-wrapper {
+    margin-left: 0;
   }
 }
 .header .content-wrapper h1 {
@@ -1138,39 +1155,44 @@ a:hover {
   font-size: 3rem;
   color: #fff;
 }
-.header .content-wrapper .btn {
+.header .content-wrapper .btn__trading {
   background-image: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
   color: #fff;
   border: none;
   padding: 1.5rem 3.5rem;
-  transition: all 0.5s;
-  max-width: 35rem;
+  display: inline-block;
+  transition: all 0.1s ease;
 }
-.header .content-wrapper .btn:hover {
+.header .content-wrapper .btn__trading:hover {
   background-image: linear-gradient(160deg, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%);
   color: #fff;
 }
-.header .content-wrapper .btn .icon {
+.header .content-wrapper .btn__trading .icon {
   fill: #fff;
 }
-
 .experience-section {
-  padding: 25rem 0;
-  background-image: url("https://binarystars.cc/wp-content/uploads/2018/03/home-1.png?id=842") !important;
-  background-position: top center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+  padding: 10rem 0 10rem 0;
+  background-image: url("https://binarystars.cc/wp-content/uploads/2018/03/home-1.png?id=842");
+  background-position: top center;
+  background-repeat: no-repeat;
   position: relative;
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .experience-section {
     background-image: none !important;
   }
 }
 
 .experience {
-  max-width: 72rem;
+  max-width: 65rem;
   margin-left: auto;
+  width: 50%;
+}
+@media only screen and (max-width: 62em) {
+  .experience {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .experience h2 {
   color: #fff;
@@ -1180,29 +1202,46 @@ a:hover {
   margin-top: 10rem;
   position: relative;
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .work {
     margin-top: 15rem;
   }
 }
-.work h2::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#017bfd), to(#20bfe1));
+.work .icon-circle {
+  height: 5rem;
+  width: 5rem;
+  background-image: linear-gradient(#017bfd, #20bfe1);
   color: #1aafe9;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: initial;
-  content: "\e979";
-  font-family: "fontello";
-  margin-top: 0;
+  border-radius: 50%;
+  margin-left: -2.5rem;
+  position: relative;
+  margin-right: 2rem;
+}
+.work .icon-circle::before {
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 3rem;
   position: absolute;
-  left: -12px;
-  top: 8px;
-  right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #050510;
+  border-radius: 50%;
 }
 .work__list {
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 62em) {
+  .work__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem 0;
+  }
+}
+.work__list h2 {
+  font-size: 1.8em;
 }
 .work__line {
   height: 4rem;
@@ -1232,13 +1271,13 @@ a:hover {
 }
 
 .platform-section {
-  padding: 20rem 0;
+  padding: 6rem 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/platform-bg.jpg");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .platform-section {
     background-image: none !important;
   }
@@ -1246,17 +1285,17 @@ a:hover {
 .platform-section h2 {
   text-align: center !important;
 }
+.platform-section .platform__title {
+  margin-bottom: 15rem;
+}
 
-.platform {
-  margin-top: 15rem;
-}
-@media only screen and (max-width: 48em) {
-  .platform {
-    margin-top: 5rem;
-  }
-}
 .platform__item {
   text-align: center;
+}
+.platform__item:hover .icon {
+  fill: #fff;
+  height: 100%;
+  width: 100%;
 }
 .platform__img {
   height: 6rem;
@@ -1264,13 +1303,14 @@ a:hover {
   margin: 0 auto;
 }
 .platform__img .icon {
-  fill: #fff;
+  fill: #1aafe9;
   height: 100%;
   width: 100%;
+  transition: all 0.5s;
 }
 
 .footer {
-  padding: 15rem 5rem;
+  padding: 12rem 5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/footer_bg.jpg");
   background-size: cover;
   background-position: top center;
@@ -1291,6 +1331,87 @@ a:hover {
 }
 .footer__link:hover {
   color: #fff;
+}
+
+.signup-page .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/bg-blur.jpg");
+}
+.signup-page .sign {
+  background-color: rgba(13, 14, 22, 0.6);
+  max-height: 56rem;
+  max-width: 45rem;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 0.75rem;
+}
+.signup-page .sign__logo {
+  height: 10rem;
+}
+.signup-page .sign h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-align: center;
+}
+.signup-page .sign__inputs label {
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.signup-page .sign__inputs .input-primary {
+  background-color: rgba(28, 30, 47, 0.6);
+  border-radius: 1rem;
+  border: 1px solid rgba(209, 213, 219, 0.1);
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding: 1.2rem 1rem;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  transition: all 0.5s;
+}
+.signup-page .sign__inputs .input-primary:focus {
+  border: 1px solid rgba(194, 90, 236, 0.6);
+}
+.signup-page .sign .tarms a {
+  color: #b821c4;
+  text-decoration: none;
+}
+.signup-page .sign .btn-submit {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #b821c4;
+  background-color: #b821c4;
+  position: relative;
+  transition: all 0.5s;
+}
+.signup-page .sign .btn-submit:hover {
+  filter: drop-shadow(0px 0px 5px #c25aec);
+  color: #fff;
+}
+.signup-page .sign .btn-submit .icon {
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+  margin-right: auto;
+}
+.signup-page .sign .btn-submit p {
+  align-self: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

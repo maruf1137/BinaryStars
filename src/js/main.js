@@ -1,19 +1,9 @@
-$(".owl-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    400: {
-      items: 2,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
+window.addEventListener('scroll', () => {
+	const nav = document.querySelector('.nav');
+	const target = window.scrollY;
+	if (target > 100) {
+		nav.classList.add('sticky');
+	} else {
+		nav.classList.remove('sticky');
+	}
 });

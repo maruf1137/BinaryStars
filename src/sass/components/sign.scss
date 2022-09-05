@@ -1,0 +1,97 @@
+.signup-page {
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/bg-blur.jpg');
+	}
+
+	.sign {
+		background-color: rgb(13, 14, 22, 0.6);
+		max-height: 56rem;
+		max-width: 45rem;
+		width: 100%;
+		padding: 3rem;
+		border-radius: 0.75rem;
+
+		&__logo {
+			height: 10rem;
+		}
+
+		h2 {
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			text-align: center;
+		}
+
+		&__inputs {
+			label {
+				clip: rect(0, 0, 0, 0);
+				border-width: 0;
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				white-space: nowrap;
+				width: 1px;
+			}
+			.input-primary {
+				background-color: rgb(28, 30, 47, 0.6);
+				border-radius: 1rem;
+				border: 1px solid rgb(209, 213, 219, 0.1);
+				display: block;
+				font-size: 1.6rem;
+				line-height: 1.25rem;
+				margin-bottom: 0.5rem;
+				margin-top: 1rem;
+				padding: 1.2rem 1rem;
+				position: relative;
+				width: 100%;
+				color: $color-white;
+				transition: all 0.5s;
+
+				&:focus {
+					border: 1px solid rgba(194, 90, 236, 0.6);
+					// filter: drop-shadow(0px 0px 5px rgba(194, 90, 236, 0.8));
+				}
+			}
+		}
+
+		.tarms {
+			a {
+				color: #b821c4;
+				text-decoration: none;
+			}
+		}
+
+		.btn-submit {
+			width: 100%;
+			border-radius: 1rem;
+			border: 1px solid #b821c4;
+			background-color: #b821c4;
+			position: relative;
+			transition: all 0.5s;
+
+			&:hover {
+				filter: drop-shadow(0px 0px 5px #c25aec);
+				color: $color-white;
+			}
+
+			.icon {
+				height: 2rem;
+				width: 2rem;
+				vertical-align: middle;
+				margin-right: auto;
+			}
+
+			p {
+				align-self: center;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}

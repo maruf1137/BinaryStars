@@ -21,6 +21,9 @@ html {
 	@media only screen and (max-width: $laptop-port) {
 		font-size: 55%;
 	}
+	@media only screen and (max-width: $mbl-land) {
+		font-size: 50%;
+	}
 	@media only screen and (max-width: $mbl-port) {
 		font-size: 45%;
 	}
@@ -41,7 +44,7 @@ body {
 
 section {
 	@media only screen and (max-width: $tab-port) {
-		padding: 10rem 5rem !important;
+		padding: 10rem !important;
 	}
 	@media only screen and (max-width: $mbl-port) {
 		padding: 10rem 2rem !important;
