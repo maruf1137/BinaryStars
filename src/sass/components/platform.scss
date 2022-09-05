@@ -1,0 +1,38 @@
+.platform-section {
+	padding: 20rem 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+		url('../img/platform-bg.jpg');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+
+	@media only screen and (max-width: $tab-port) {
+		background-image: none !important;
+	}
+
+	h2 {
+		text-align: center !important;
+	}
+}
+
+.platform {
+	margin-top: 15rem;
+
+	@media only screen and (max-width: $tab-port) {
+		margin-top: 5rem;
+	}
+
+	&__item {
+		text-align: center;
+	}
+	&__img {
+		height: 6rem;
+		width: 6rem;
+		margin: 0 auto;
+
+		.icon {
+			fill: $color-white;
+			@include img-size;
+		}
+	}
+}

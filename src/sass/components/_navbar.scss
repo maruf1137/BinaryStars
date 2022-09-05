@@ -1,0 +1,22 @@
+.nav {
+	padding: 2rem 3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+
+	@media only screen and (max-width: $tab-port) {
+		padding: 2rem 2rem;
+	}
+
+	&__logo {
+		max-height: 4.5em;
+		height: 4.5rem;
+		width: 21rem;
+
+		img {
+			@include img-size;
+		}
+	}
+}

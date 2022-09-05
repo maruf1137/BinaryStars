@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	text-transform: capitalize;
+}
+// ::selection {
+// 	background: $color-text;
+// 	color: #fff;
+// }
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	@media only screen and (max-width: $laptop-port) {
+		font-size: 55%;
+	}
+	@media only screen and (max-width: $mbl-port) {
+		font-size: 45%;
+	}
+}
+
+body {
+	font-family: $font-primary;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: $color-white;
+	overflow-x: hidden;
+	// background-color: $color-black;
+}
+
+.main {
+	background-color: #050510;
+}
+
+section {
+	@media only screen and (max-width: $tab-port) {
+		padding: 10rem 5rem !important;
+	}
+	@media only screen and (max-width: $mbl-port) {
+		padding: 10rem 2rem !important;
+	}
+}
+
+.custom-container {
+	// width: 95%;
+	// max-width: 120rem;
+}
